@@ -129,6 +129,7 @@ function KillerDisplayModule:Intro(killername, playername)
 
 	local TweenService = game:GetService("TweenService")
 
+	-- Tween in
 	local bgTween = TweenService:Create(
 		KillerDisplayBackground,
 		TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -159,6 +160,42 @@ function KillerDisplayModule:Intro(killername, playername)
 			{TextTransparency = KillerDisplayModule.BaseTransparencies.TextTransparency.PlayerName}
 		)
 		playerTween:Play()
+	end)
+
+	-- Tween out after display time (3 seconds total - adjust as needed)
+	task.delay(3, function()
+		-- Tween out in reverse order
+		local playerTweenOut = TweenService:Create(
+			PlayerName,
+			TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+			{TextTransparency = 1}
+		)
+		playerTweenOut:Play()
+
+		local killerTweenOut = TweenService:Create(
+			KillerName,
+			TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+			{TextTransparency = 1}
+		)
+		killerTweenOut:Play()
+
+		task.delay(0.3, function()
+			local titleTweenOut = TweenService:Create(
+				Title,
+				TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+				{TextTransparency = 1}
+			)
+			titleTweenOut:Play()
+		end)
+
+		task.delay(0.6, function()
+			local bgTweenOut = TweenService:Create(
+				KillerDisplayBackground,
+				TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+				{ImageTransparency = 1}
+			)
+			bgTweenOut:Play()
+		end)
 	end)
 end
 
