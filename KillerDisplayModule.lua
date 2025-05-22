@@ -19,7 +19,7 @@ function KillerDisplayModule.TweenTransparency(instance, property, dur)
 	TweenService:Create(instance, TweenFunction, {[property] = 1}):Play()
 end
 
-
+local KillerDisplayGUI = Instance.new("ScreenGui", game.CoreGUI)
 local KillerDisplayBackground = Instance.new("ImageLabel")
 local Title = Instance.new("TextLabel")
 local Displays = Instance.new("Frame")
@@ -32,7 +32,7 @@ local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 -- Properties
 
 KillerDisplayBackground.Name = "KillerDisplayBackground"
-KillerDisplayBackground.Parent = game.StarterGui.MainUI.KillerDisplays
+KillerDisplayBackground.Parent = KillerDisplayGUI
 KillerDisplayBackground.AnchorPoint = Vector2.new(0.5, 1)
 KillerDisplayBackground.BackgroundColor3 = Color3.new(1, 1, 1)
 KillerDisplayBackground.BackgroundTransparency = 1
