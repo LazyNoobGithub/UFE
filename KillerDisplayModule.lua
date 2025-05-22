@@ -19,7 +19,7 @@ function KillerDisplayModule.TweenTransparency(instance, property, dur)
 	TweenService:Create(instance, TweenFunction, {[property] = 1}):Play()
 end
 
-local KillerDisplayGUI = Instance.new("ScreenGui", game.CoreGUI)
+local KillerDisplayGUI = Instance.new("ScreenGui", game.CoreGui)
 local KillerDisplayBackground = Instance.new("ImageLabel")
 local Title = Instance.new("TextLabel")
 local Displays = Instance.new("Frame")
