@@ -2,7 +2,11 @@
 
 local db = loadstring(game:HttpGet("https://raw.githubusercontent.com/LazyNoobGithub/UFE/refs/heads/main/Scripts/AnimationDatabaser.lua"))()
 
-function cg(name, value) if _G[name] == nil then _G[name] = value end end
+function cg(name, value)
+    if rawget(_G, name) == nil then
+        rawset(_G, name, value)
+    end
+end
 
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
