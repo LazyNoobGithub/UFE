@@ -17,13 +17,13 @@ cg("chosen_normal", db.normalanims)
 cg("chosen_injured", db.normalanims_injured)
   
 cg("CustomAnimations", {
-    ["idle"] = chosen_normal.idle, -- non-injured idle
-    ["walk"] = chosen_normal.walk, -- non-injured walk
-    ["run"] = chosen_normal.run, -- non-injured run
+    ["idle"] = _G.chosen_normal.idle, -- non-injured idle
+    ["walk"] = _G.chosen_normal.walk, -- non-injured walk
+    ["run"] = _G.chosen_normal.run, -- non-injured run
 
-    ["injuredidle"] = chosen_injured.injuredidle, -- injured idle
-    ["injuredwalk"] = chosen_injured.injuredwalk, -- injured walk
-    ["injuredrun"] = chosen_injured.injuredrun, -- injured run
+    ["injuredidle"] = _G.chosen_injured.injuredidle, -- injured idle
+    ["injuredwalk"] = _G.chosen_injured.injuredwalk, -- injured walk
+    ["injuredrun"] = _G.chosen_injured.injuredrun, -- injured run
 })
 
 local AnimateNames = {
