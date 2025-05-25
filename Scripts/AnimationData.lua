@@ -142,34 +142,34 @@ local john = {
 }
 
 local anim_data = {
-    normalanims,
-    normalanims_injured,
+    nomalanims = normalanims,
+    normalanims_injured = normalanims_injured,
     
-    normalretro,
-    normalretro_injured,
+    normalretro = normalretro,
+    normalretro_injured = normalretro_injured,
 
-    mafiosoanims,
-    mafiosoanims_injured,
+    mafiosoanims = mafiosoanims,
+    mafiosoanims_injured = mafiosoanims_injured,
 
-    jx1dx1,
-    hatredretro,
-    hatred,
-    oc,
+    jx1dx1 = jx1dx1,
+    hatredretro = hatredretro,
+    hatred = hatred,
+    oc = oc,
     
-    nolie,
-    retroguest,
-    retrojohn,
-    hellojason,
+    nolie = nolie,
+    retroguest = retroguest,
+    retrojohn = retrojohn,
+    hellojason = hellojason,
 
-    retrojason,
-    jason,
-    jason_ragingpace,
+    retrojason = retrojason,
+    jason = jason,
+    jason_ragingpace = jason_ragingpace,
 
-    c00lkidd,
-    bluudud,
-    john,
+    c00lkidd = c00lkidd,
+    bluudud = bluudud,
+    john = john,
     
-    dusekkar,
-    dusekkar_injured,
+    dusekkar = dusekkar,
+    dusekkar_injured = dusekkar_injured,
 }
-return anim_data
+return anim_data+
