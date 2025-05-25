@@ -133,12 +133,14 @@
 ["run"] = 138421545751238, -- non-injured run
 ]]
 
+function cg(name, value) if _G[name] == nil then _G[name] = value end end
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local Character = LocalPlayer.Character
 local AnimateScript = Character.Animate
 
-_G.CustomAnimations = {
+cg(CustomAnimations, {
     ["idle"] = 101187934796631, -- non-injured idle
     ["walk"] = 129809765506966, -- non-injured walk
     ["run"] = 97917754365808, -- non-injured run
@@ -146,7 +148,7 @@ _G.CustomAnimations = {
     ["injuredidle"] = 98730629040334, -- injured idle
     ["injuredwalk"] = 127979673249525, -- injured walk
     ["injuredrun"] = 127840952753111, -- injured run
-}
+})
 
 local AnimateNames = {
     "idle",
