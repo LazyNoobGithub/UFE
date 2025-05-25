@@ -1,0 +1,55 @@
+-- animation copier
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character
+local AnimateScript = Character.Animate
+
+CustomAnimations = {
+    ["idle"] = 0, -- non-injured idle
+    ["walk"] = 0, -- non-injured walk
+    ["run"] = 0, -- non-injured run
+
+    ["injuredidle"] = 0, -- injured idle
+    ["injuredwalk"] = 0, -- injured walk
+    ["injuredrun"] = 0, -- injured run
+}
+
+local function stringAnimations(t)
+    return string.format([[
+["idle"] = %d, -- non-injured idle
+["walk"] = %d, -- non-injured walk
+["run"] = %d, -- non-injured run
+
+["injuredidle"] = %d, -- injured idle
+["injuredwalk"] = %d, -- injured walk
+["injuredrun"] = %d, -- injured run
+]],
+        t.idle, t.walk, t.run,
+        t.injuredidle, t.injuredwalk, t.injuredrun)
+end
+
+local AnimateNames = {
+    "idle",
+    "injuredidle",
+
+    "walk",
+    "injuredwalk",
+
+    "run",
+    "injuredrun"
+}
+
+function copyAnimationInstance(animationinstance)
+    local childanim = animationinstance:FindFirstChildWhichIsA("Animation")
+    return childanim.AnimationId
+end 
+
+for i,v in pairs(AnimateNames) do
+    local copied = copyAnimationInstance(AnimateScript[v])
+    local gsub = string.gsub(copied, "rbxassetid://", "")
+    CustomAnimations[v] = tonumber(gsub)
+end
+
+local goteem = stringAnimations(CustomAnimations)
+setclipboard(goteem)

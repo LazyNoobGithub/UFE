@@ -1,0 +1,27 @@
+local Players = game:GetService("Players")
+
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character
+
+local Baseplate
+
+function CreateBaseplate()
+    local BaseplateVar
+
+    if workspace:FindFirstChild("TestingBaseplate") then
+        BaseplateVar = workspace:FindFirstChild("TestingBaseplate")
+    else
+        BaseplateVar = Instance.new("Part")
+        BaseplateVar.Name = "TestingBaseplate"
+        BaseplateVar.Anchored = true
+        BaseplateVar.Transparency = 0.5
+        BaseplateVar.Size = Vector3.new(300, 20, 300)
+        BaseplateVar.Position = Vector3.new(0, 520, 0)
+        BaseplateVar.Parent = workspace
+    end
+
+    return BaseplateVar
+end
+
+Baseplate = CreateBaseplate()
+Character:PivotTo(Baseplate:GetPivot() + Vector3.new(0,15,0))
