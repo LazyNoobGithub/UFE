@@ -1,6 +1,9 @@
 -- Fluent Installation
 local n = "Lazy's Fluent Installer"
 function log(...) print("["..n.."] -", ...) end
+if not(_G.InstalledFluent) then
+_G.InstalledFluent = false
+end
 
 log("Initializing")
 local primarygit = "https://raw.githubusercontent.com/LazyNoobGithub/UFE/refs/heads/main/FluentFork/"
@@ -39,3 +42,4 @@ for i,v in pairs(installfiles) do
 end
 
 log("Downloaded all files!")
+_G.InstalledFluent = true
