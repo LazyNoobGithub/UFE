@@ -13,10 +13,10 @@ local LocalPlayer = Players.LocalPlayer
 local Character = LocalPlayer.Character
 local AnimateScript = Character.Animate
 
-cg(chosen_normal, db.normalanims)
-cg(chosen_injured, db.normalanims_injured)
+cg("chosen_normal", db.normalanims)
+cg("chosen_injured", db.normalanims_injured)
   
-cg(CustomAnimations, {
+cg("CustomAnimations", {
     ["idle"] = chosen_normal.idle, -- non-injured idle
     ["walk"] = chosen_normal.walk, -- non-injured walk
     ["run"] = chosen_normal.run, -- non-injured run
