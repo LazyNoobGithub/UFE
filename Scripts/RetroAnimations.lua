@@ -1,6 +1,6 @@
 -- animation changer
 
-local db = loadstring(game:HttpGet("https://raw.githubusercontent.com/LazyNoobGithub/UFE/refs/heads/main/Scripts/AnimationDatabaser.lua"))()
+local db = loadstring(game:HttpGet("https://raw.githubusercontent.com/LazyNoobGithub/UFE/refs/heads/main/Scripts/AnimationDatabase.lua"))()
 
 function cg(name, value)
     if rawget(_G, name) == nil then
