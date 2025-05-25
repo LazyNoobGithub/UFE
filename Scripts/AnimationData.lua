@@ -59,7 +59,7 @@ local oc = {
 ["idle"] = 101187934796631, -- non-injured idle
 ["idle"] = 91461448848225, -- non-injured idle
 ["walk"] = 72916466099135, -- non-injured walk
-]]
+}
 
 local dusekkar = {
 ["idle"] = 93526776499226, -- non-injured idle
