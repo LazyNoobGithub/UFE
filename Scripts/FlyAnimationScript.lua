@@ -1,4 +1,5 @@
 -- fly detection + fly script
+function cg(name, value) if _G[name] == nil then _G[name] = value end end
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -8,7 +9,7 @@ local Character = LocalPlayer.Character
 local HumanoidRootPart = Character.HumanoidRootPart
 local AnimateScript = Character.Animate
 
-_G.AutoFly = true
+cg(AutoFly, true)
 
 function returnAnimationInstance(animationinstance, returnID)
     local childAnim = animationinstance:FindFirstChildWhichIsA("Animation")
