@@ -1,5 +1,7 @@
-_G.ChosenCharacter = "Guest1337"
-_G.ChosenSkin = "Unfunny64Bits" 
+function cg(name, value) if _G[name] == nil then _G[name] = value end end
+
+cg(ChosenCharacter, "Guest1337")
+cg(ChosenSkin, "Unfunny64Bits")
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -11,10 +13,8 @@ local Character = LocalPlayer.Character
 local Humanoid = Character.Humanoid
 local setCharacterAlready = false
 
-_G.AutoHeal = true
-if not(_G.AutoHealTaken) then
-   _G.AutoHealTaken = false
-end
+cg(AutoHeal, true)
+cg(AutoHealTaken, false)
 
 function FireEvent(args, Event)
     Event:FireServer(unpack(args))
