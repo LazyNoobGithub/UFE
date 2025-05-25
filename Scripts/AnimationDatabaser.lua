@@ -172,4 +172,4 @@ local anim_data = {
     dusekkar = dusekkar,
     dusekkar_injured = dusekkar_injured,
 }
-return anim_data+
+return anim_data
