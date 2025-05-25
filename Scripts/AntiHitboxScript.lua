@@ -1,6 +1,8 @@
-_G.ImmortalToggle = true
-_G.UltraInstinct = true
-_G.DeleteDuration = 0.5
+function cg(name, value) if _G[name] == nil then _G[name] = value end end
+
+cg(ImmortalToggle, true)
+cg(UltraInstinct, true)
+cg(DeleteDuration, 0.5)
 local Players = game:GetService("Players")
 local HitboxesFolder = workspace:FindFirstChild("Hitboxes")
 
