@@ -142,7 +142,7 @@ local john = {
 }
 
 local anim_data = {
-    nomalanims = normalanims,
+    normalanims = normalanims,
     normalanims_injured = normalanims_injured,
     
     normalretro = normalretro,
